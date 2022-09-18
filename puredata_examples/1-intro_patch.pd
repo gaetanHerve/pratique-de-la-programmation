@@ -1,0 +1,81 @@
+#N canvas 2038 1 1920 1037 12;
+#X obj 711 120 osc~ 440;
+#X obj 711 212 *~ 0.5;
+#X obj 716 310 dac~;
+#X obj 763 235 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X msg 763 258 \; pd dsp \$1;
+#X floatatom 750 180 5 0 1 0 - - - 0;
+#X floatatom 711 90 5 27.5 880 0 - - - 0;
+#X text 790 233 Activer / désactiver l'audio;
+#X text 797 179 faire varier l'intensité du signal;
+#X text 754 87 faire varier la fréquence du signal;
+#X text 112 437 l'objet dac~ (digital audio converter) permet de passer
+les instructions numériques fournies en entrée à la carte son pour
+générer un signal audio;
+#X text 573 8 GENERER UNE SINUSOIDE DE FREQUENCE ET D'INTENSITE VARIABLES
+;
+#X obj 68 440 dac~;
+#X text 114 305 l'objet osc~ génère une onde sinusoidale à une fréquence
+donnée (correspond à l'objet cycle~ dans Max/MSP);
+#X obj 70 308 osc~;
+#X obj 74 373 *~;
+#X text 116 376 l'objet *~ multiplie le signal audio fourni en entrée
+par le facteur fourni en paramètre. Ce facteur doit être compris
+entre 0 et 1;
+#X floatatom 712 399 5 0 0 0 - - - 0;
+#X text 760 433 une boîte de nombre permet d'afficher/controller une
+valeur numérique. Pour la faire varier manuellement \, il faut cliquer
+puis maintenir le click sur la boîte puis déplacer le pointeur vers
+le haut ou vers le bas. Cela ne permet d'obtenir que des entiers. Pour
+obtenir des décimales \, il faut presser la touche shift durant la
+manipulation. Il est possible de borner le registre de valeurs d'une
+boîte de nombre en faisant un click droit sur la boîte puis sélectionner
+"properties". Une popup apparaît \, dans laquelle il est possible
+de renseigner les Lower et Upper Limits;
+#X text 755 636 le toggle est un élement envoyant un message 1 ou
+0 au click. Lorsque le click déclenche l'affichage d'une croix \,
+le message envoyé est 1 Lorsque le click déclenche la disparition
+de cette croix \, le message envoyé est 0 Un grand nombre d'ojet demandent
+des valeurs 1 ou 0 pour être activé/désactivé;
+#X obj 728 606 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 756 603 TOGGLE (interrupteur) raccourci : shit+cmd+t;
+#X text 759 398 BOITE DE NOMBRE raccourci : shit+cmd+3;
+#X text 59 686 * les raccourcis cités sont ceux pour macOS. Pour windows
+ou linux \, remplacer "cmd" par "ctrl";
+#X text 64 508 __________________________;
+#X text 114 126 les objets sont les briques élémentaires de puredata
+et Max/MSP. Ce sont eux qui contiennent la logique \, effectuent les
+opérations. Ils sont définis par leur nom \, leurs entrées (mises
+en exergue sur la parite supérieur de la boîte) et leurs sorties
+(mises en exergue sur la partie infèrieure de la boîte). Aux entrées
+sont fournies les informations sur lesquelles on veut opérer une transformation
+(nombre \, flux audio/vidéo \, message \, etc.) et/ou des paramètres.
+Les valeurs des paramètres peuvent généralement être définies
+par défaut directement dans la boîte à la suite du nom de l'objet.
+;
+#X text 116 46 OBJETS raccourci : shift+cmd+1 exemples et documentation
+: click droit sur l'objet > help explorer les objets/la documentation:
+Menu "Help" de la barre de menu puredata;
+#X text 756 828 COMMENTAIRE raccourci : shift+cmd+5;
+#X text 63 546 ACTIVER/DESACTIVER LE MODE EDITION raccourci : cmd+e
+;
+#X text 757 747 MESSAGE raccourci : shift+cmd+2;
+#X msg 670 750 \; pd dsp \$1;
+#X text 758 781 un message permet d'envoyer des instructions à un
+objet;
+#X text 65 580 être en mode édition permet de créer des objets \,
+boîtes de nombres \, etc. Sortir du mode édition (i.e. enter dans
+le mode utilisation) permet de faire fonctionner le patch (manipuler
+les boîtes de nombre \, cliquer sur les toggles \, etc.);
+#X text 756 865 ceci est un commentaire. Les commentaires permettent
+de documenter l'utilisation et le fonctionnement du patch (cette fenêtre
+et tout ce quel contient est un patch);
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 1 1;
+#X connect 6 0 0 0;
