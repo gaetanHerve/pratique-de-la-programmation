@@ -1,16 +1,26 @@
-# Bases de la programmation en javascript (part1)
+# Bases de la programmation en javascript
 
 
 ## Quelques ressources
 
-**Environnements pour s'entraîner :**
+**Environnements pour programmer :**
 - En ligne : [codepen](https://codepen.io), par exemple
 - En local : il existe de multiples IDE (pour *Integrated Developpement Environment*). En voici 2 parmi les plus utilisés et compatibles windows/macOS/linux :
     - [Atom](https://atom.io/) (gratuit et open-source)
     - [Visual Studio Code](https://code.visualstudio.com/) (gratuit et propriétaire)
 
 
+**Ressources en ligne**
+- [Support pour ce cours](https://github.com/gaetanHerve/pratique-de-la-programmation)
+
+Documentation et tutoriels
+- [Javascript Reference](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference)
+- [W3Schools](https://www.w3schools.com/)
+- [Openclassrooms](https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript)
+
+
 ## Eléments fondamentaux pour l'écriture de code informatique
+
 Le contenu ci-dessous se réfère exclusivement à du code javascript.
 La plupart des concepts se retrouvent dans d'autres langages de programmation, mais leurs graphie et/ou principes de mise en oeuvre peuvent varier.
 
