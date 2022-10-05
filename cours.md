@@ -183,19 +183,89 @@ if (bool) {
 
 ### Les conditions
 
-Exemple :
-```
-let nbStudents = Math.random()*25;
-console.log('nbStudents: ', nbStudents);
+En programmation, une condition est une structure permettant d'exécuter du code en fonction de la réalisation ou non d'une condition déterminée.
 
-if (nbStudents > 10) {
-    console.log('ceci est vrai');
-} else if (nbStudents < 0) {
-    console.log("il n'y pas d'étudiant"); 
-} else {
-    console.log('ceci est faux');
+Si nous exprimons le concept en pseudo-code, cela donne quelque chose de cet ordre :
+
+SI cette condition est vraie
+    ALORS on exécute ce code-ci
+SINON SI cette autre condition est vraie
+    ALORS on exécute celui-ci
+SINON
+    on éxécute ce code-là
+
+En Javascript,
+- on utilise le mot-clé **if** pour introduire la structure de condition
+- on indique la condition entre parenthèses `()`à la suite du *if*
+- on écrit les instructions à éxécuter si la condition est remplie entre accolades `{}`
+- on peut chaîner des conditions en utilisant le mot-clé **else if**, suivi de la même structure que pour *if*
+- on peut gérer le cas où la condition n'est pas remplie grâce au mot-clé **else**, sans préciser de condition, suivi des instruction à exécuter entre accolades `{}` 
+
+Exemples :
+
+#### **Structure conditionnelle simple**
+
+```
+let maCondition = true;
+
+if (maCondition) {
+    console.log("ce code est exécuté si maCondition == true");
 }
 
-console.log("je suis après la condition")
+```
+
+#### **Structure conditionnelle avec else**
+
+```
+let maCondition = true;
+
+if (maCondition) {
+    console.log("ce code est exécuté si maCondition == true");
+} else {
+    console.log("ce code est exécuté si maCondition != true")
+}
+
+```
+
+#### **Structure conditionnelle avec else if**
+
+```
+let maCondition = true;
+
+if (maCondition) {
+    console.log("ce code est exécuté si maCondition == true");
+} else if (maCondition == 1) {
+    console.log("ce code est exécuté si maCondition == 1");
+} else {
+    console.log("ce code est exécuté si maCondition != true ET maCondition != 1")
+}
+
+```
+
+#### **Exemple concret**
+
+Le code suivant décrit une structure conditionnelle dans laquelle on cherche, à partir d'un nombre d'étudiant-e-s généré aléatoirement,
+à statuer si oui ou non la salle possède un nombre de places (déterminé) suffisant pour accueillir le cours.
+
+```
+// On détermine le nombre de places de notre salle de cours
+let nbPlaces = 25;
+
+// Math.random() génère un nombre aléatoire entre 0 et 1. On le multiplie par une valeur pour obtenir un nombre entre 0 et cette valeur.
+// On utilise ensuite Math.round() pour arrondir la valeur obtenue à l'entier le plus proche.
+let randomValue = Math.random()*50; 
+let nbStudents = Math.round(randomValue);
+
+// A titre indicatif, on affiche dans la console la valeur obtenue
+console.log(nbStudents);
+
+// On compare le nombre de places au nombre d'étudiant-e-s
+if (nbStudents < nbPlaces) {
+    console.log('Le cours pourra avoir lieu : il y a plus de places que d'étudiant-e-s');
+} else if (nbStudents == nbPlaces) {
+    console.log('Le cours pourra avoir lieu : il y a exactement le bon nombre de places');
+} else {
+    console.log(`Le cours ne pourra pas avoir lieu dans cette salle : il manque ${nbStudents - nbPlaces} places`);
+}
 ```
 
