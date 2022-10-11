@@ -269,3 +269,74 @@ if (nbStudents < nbPlaces) {
 }
 ```
 
+### Les boucles ###
+
+Le boucles sont une structure de code permettant de passer par le même bloc de code plusieurs fois.
+Il existe plusieurs manière d'écrire une boucle, avec des comportements qui peuvent différer (for, while, forEach, for in, for of...), mais, en substance, le principe reste similaire.
+
+La boucle la plus élémentaire utilise le mot-clé **for**, suivi entre parenthèses des instructions de gestion dela boucle, puis entre brackets, le bloc de code à exécuter.
+
+
+#### **Exemples de boucles** ####
+
+```
+let nbIterations = 10;
+for (let i=0; i<nbIterations; i++) {
+    console.log(`iteration ${i}`);
+}
+```
+
+Dans l'exemple ci-dessus, **Les instructions de boucle** sont `(let i=0; i<nbIterations; i++)`.
+
+Ces instructions se composent de 3 éléments :
+- la déclaration de la variable (ici *i* avec `let i=0;`) que l'on va utiliser pour gérer le nombre d'itérations (*i.e.* de tour de boucle) et de lui affecter une valeur entière, généralement *0*.
+- la condition requise pour exécuter le code contenu dans la boucle (ici `i<nbIterations;`). Tant que cette condition est remplie, le code contenu dans la boucle est exécuté. Si elle ne l'est pas, le programme passera directement aux lignes de code placées à la suite de la boucle. 
+- l'incrémentation de la variable utilisée (ici `i++`), qui s'effectue à la fin de chaque tour de boucle. `i++` pourrait également s'écrire `i = i + 1` ou `i += 1`. Ces différentes syntaxes ont le même résultat : ajouter 1 à la valeur contenue dans notre variable.
+
+Attention à séparer ces 3 instructions par des virgules, et non des points-virgules, puisqu'il s'agit d'une suite d'instructions (un peu comme si l'on écrivait 3 lignes de code sur la même ligne).
+
+On utilise fréquemment les boucles pour parcourir des tableaux et en extraire les valeurs, ou encore modiufier ces valeurs.
+Pour cela, nous aurons besoin de connaître le nombre d'éléments contenus dans le tableau. La méthode la plus directe est d'utiliser l'attribut **length**, comme dans l'exemple ci-dessous.
+
+Par exemple :
+
+```
+let prenoms = ["Anthony", "Jessica", "Wilfried", "Marie", "Camille", "Albert"];
+for (let i=0; i<prenoms.length; i++) {
+    console.log(`le prenom ${i} est ${prenoms[i]}`);
+}
+```
+
+Comme dans toute structure de code, il est possible d'insérer une autre structure au sein d'une boucle :
+
+```
+let prenoms = ["Anthony", "Jessica", "Wilfried", "Marie", "Camille", "Albert"];
+for (let i=0; i<prenoms.length; i++) {
+    if (prenom[i] === "Marie") {
+        console.log("On a retrouvé Marie !");
+    } else {
+        console.log("ah, non, ça n'est pas elle :/");
+    }
+}
+```
+
+Un exemple d'un autre type de boule utilisé en Javascript : **for of**
+
+La boucle **for of** permet d'accéder directement au différents éléments d'un tableau sans utiliser leur index :
+
+```
+let prenoms = ["Anthony", "Jessica", "Wilfried", "Marie", "Camille", "Albert"];
+for (prenom of prenoms) {
+    if (prenom === "Marie") {
+        console.log("On a retrouvé Marie !");
+}
+```
+
+
+
+
+
+
+
+
+
