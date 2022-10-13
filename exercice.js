@@ -22,5 +22,24 @@ const batiment = [
   // Le nombre d'étudiant-e-s est généré aléatoirement
   const tailleMax = 50;
   const nbStudents = Math.round(Math.random()*tailleMax);
+  console.log("nbStudents: ", nbStudents);
 
-  console.log("test"); 
+  let plusPetiteDiff = tailleMax; 
+
+  for (let i=0; i<batiment.length; i++) {
+    let salle = batiment[i];
+    let diff;
+    if (nbStudents <= salle.nbPlaces) {
+      console.log("la salle " + salle.nom + " est suffisament grande");
+      diff = salle.nbPlaces - nbStudents;
+      console.log("dif dans la boucle ", diff);
+      if (diff < plusPetiteDiff) {
+        plusPetiteDiff = diff;
+      }
+    }
+  }
+
+  console.log("diff hors de la boucle: ", plusPetiteDiff);
+
+
+
