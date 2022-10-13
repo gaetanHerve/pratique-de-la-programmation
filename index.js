@@ -1,62 +1,77 @@
-// type: integer
-// let nbStudents = 25;
-
-// type: string
-let salut = "helloworld!";
-
-// type: array => l'index commence à 0.
-let myArray = [1, 2, 3,"hello", salut];
-console.log(myArray[1]);
-
-// CONDITIONS
-let nbStudents = Math.random()*25;
-console.log('nbStudents: ', nbStudents);
-if (nbStudents > 10) {
-    console.log('ceci est vrai');
-} else if (nbStudents < 0) {
-    console.log("il n'y pas d'étudiant"); 
-} else {
-    console.log('ceci est faux');
-}
-
-console.log("je suis après la condtion")
-
-// console.log(nbStudents);
-
-// EXERCICE 
-
-// Utiliser Math.random()*50, stocker sa valeur dans une variable
-let nbStudents2 = Math.random()*50;
-
-// créer une variable placesMax
-// correspondant au nombre maximum de places
-// dans la salle de cours
-let palcesMax = 20;
-
-// comparer les valeurs et utiliser console.log()
-// pour afficher si le cours peut avoir lieu
-if (nbStudents < palcesMax) {
-    console.log("le cours peut se tenir");
-} else if (nbStudents == palcesMax) {
-    console.log("c'est tout juste");
-} else {
-    console.log("le cours ne peut avoir lieu");
-}
-
-
 /*
+ * Exercice 
+ *
+ * Créer une fonction permettant de trouver la salle la mieux adaptée pour le cours et la tester.
+ * - la salle doit être de taille suffisante pour accueillir tout le monde
+ * - le nombre de places excédentaires doit être le plus petit possible
+ */
 
-// conditions
-let nbStudents = Math.random()*50;
-console.log()
-if (1 === 2) {
-  console.log("la première assertion est vraie");
-} else if (1 === 3) {
-  console.log("la seconde assertion est vraie");
-} else {
-  console.log("tout est faux");
+// Les noms des salles et leur nombre de places sont définis ci-dessous
+const batiment = [
+  {nom: 'salle1', nbPlaces: 25},
+  {nom: 'salle2', nbPlaces: 14},
+  {nom: 'salle3', nbPlaces: 16},
+  {nom: 'salle4', nbPlaces: 40},
+  {nom: 'salle5', nbPlaces: 38}
+]
+
+// Le nombre d'étudiant-e-s est généré aléatoirement
+const tailleMax = 50;
+const nbStudents = Math.round(Math.random()*tailleMax);
+
+/**
+ * Renvoie la salle idéale, en termes de nombre de places, pour tenir cours
+ * 
+ * @param {Array} batiment les salles de cours et leur nombre de places
+ * @param {int} nbStudents le nombre détudiant-e-s présent-e-s
+ * @param {int} tailleMax la taille maximale d'une salle dans le bâtiment 
+ * 
+ * @return {Object} la salle dont la taille est au moins égale au nombre d'étudiant-e-s
+ * et dont le nombre de places excédentaires est le plus petit.
+ */
+function getSalleIdeale(batiment, nbStudents, tailleMax) {
+  let result = false;
+  let minimumDiff = tailleMax;
+
+  for (let salle of batiment) {
+    if (salle.nbPlaces >= nbStudents) {
+      if ((salle.nbPlaces - nbStudents) < minimumDiff) {
+        result = salle;
+        minimumDiff = salle.nbPlaces - nbStudents;
+      }
+    }
+  }
+
+  return result;
 }
 
-console.log("on est après la condition")
+/**
+ * Renvoie la salle la plus grande parmi un ensemble de salles
+ * 
+ * @param {Array} batiment les salles de cours et leur nombre de places
+ * 
+ * @return {Object} la salle dont le nombre de places est le plus grand
+ */
+function getSalleLaplusGrande(batiment) {
+  let result;
+  let capaciteMax = 0;
 
-*/
+  for (let salle of batiment) {
+    if (salle.nbPlaces > capaciteMax) {
+      result = salle;
+      capaciteMax = salle.nbPlaces;
+    }
+  }
+  
+  return result;
+}
+
+// On interprète les résultats
+let salleIdeale = getSalleIdeale(batiment, nbStudents, tailleMax);
+
+if (salleIdeale) {
+  console.log(`la salle idéale pour ce cours est ${salleIdeale.nom}, avec ${salleIdeale.nbPlaces} places pour ${nbStudents} étudiant-e-s.`);
+} else {
+  let salleMax = getSalleLaplusGrande(batiment);
+  console.log(`Aucune salle n'est suffisamment grande ; même ${salleMax.nom}, avec ses ${salleMax.nbPlaces} places, ne peut contenir les ${nbStudents} étudiant-e-s !`);
+}
