@@ -326,13 +326,13 @@ La boucle **for of** permet d'accéder directement au différents éléments d'u
 
 ```
 let prenoms = ["Anthony", "Jessica", "Wilfried", "Marie", "Camille", "Albert"];
-for (prenom of prenoms) {
+for (let prenom of prenoms) {
     if (prenom === "Marie") {
         console.log("On a retrouvé Marie !");
 }
 ```
 
-
+### Les fonctions ###
 
 
 
