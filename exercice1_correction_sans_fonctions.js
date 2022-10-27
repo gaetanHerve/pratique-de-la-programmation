@@ -21,7 +21,7 @@ const nbStudents = Math.round(Math.random()*tailleMax);
 console.log("nbStudents: ", nbStudents);
 
 /* Si la salle est suffisamment grande,
- * nous allons voir besoin de connaître
+ * nous allons avoir besoin de connaître
  * la différence entre le nombre d'étudiant-e-s et le nombre de places dans la salle
  * afin de vérifier la deuxième condition de l'énoncé
  * Stockons cette information dans une variable que l'on appellera "diff"
