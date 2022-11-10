@@ -1,13 +1,35 @@
-#N canvas 0 37 1920 1018 12;
-#X obj 280 160 print netreceive-output;
+#N canvas 314 96 1440 727 12;
+#X obj 240 200 print netreceive-output;
 #X obj 142 257 route list;
 #X msg 142 120 listen 3001;
 #X obj 142 162 netreceive -u -b;
 #X obj 142 307 route wind;
 #X obj 142 200 oscparse;
 #X obj 142 357 print wind;
+#X msg 508 272 disconnect;
+#X text 603 272 don't send;
+#X text 696 247 send as UDP;
+#X obj 500 210 prepend send;
+#X obj 500 299 netsend -u -b;
+#X msg 500 120 0.66;
+#X obj 500 180 oscformat /wind;
+#X msg 509 248 connect localhost 3001;
+#X text 140 90 Ecouter les messages OSC entrants;
+#X text 500 90 Envoyer un message OSC;
+#X text 620 180 Formatte les données en les associant à un "canal"
+;
+#X text 320 390 Options de netsend et netreceive : -u pour utiliser
+le protocole UDP -b pour envoyer les données en binaire;
+#X text 140 30 ENVOYER ET RECEVOIR DES DONNEES PAR LE PROTOCOLE OSC
+;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 0;
+#X connect 3 0 0 0;
 #X connect 4 0 6 0;
 #X connect 5 0 1 0;
+#X connect 7 0 11 0;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 0;
+#X connect 14 0 11 0;
