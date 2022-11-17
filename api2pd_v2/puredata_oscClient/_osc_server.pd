@@ -1,21 +1,21 @@
 #N canvas 1920 64 1920 991 12;
 #X obj 300 0 cnv 15 199 159 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 1270 100 cnv 15 443 601 empty empty empty 20 12 0 14 #e0e0e0
+#X obj 1270 100 cnv 15 486 601 empty empty empty 20 12 0 14 #e0e0e0
 #404040 0;
 #X obj 200 170 cnv 15 1030 392 empty empty empty 20 12 0 14 #e0e0e0
 #404040 0;
-#X obj 20 170 cnv 15 171 402 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 20 170 cnv 15 171 392 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 160 630 cnv 15 513 264 empty empty empty 20 12 0 14 #e0e0e0
+#X obj 450 600 cnv 15 513 264 empty empty empty 20 12 0 14 #e0e0e0
 #404040 0;
 #X obj 40 200 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 320 180 route list;
 #X msg 320 60 listen 3001;
 #X obj 320 90 netreceive -u -b;
-#X obj 332 850 dac~;
-#X obj 540 241 route Rennes;
+#X obj 622 820 dac~;
+#X obj 540 276 route Rennes;
 #N canvas 512 144 1276 350 distri 0;
 #X obj 160 0 inlet;
 #X obj 90 70 route wind_kph;
@@ -58,13 +58,13 @@
 #X connect 12 0 19 0;
 #X connect 13 0 20 0;
 #X connect 14 0 13 0;
-#X restore 290 271 pd distri;
-#X floatatom 230 321 5 0 0 0 - - -, f 5;
-#X floatatom 270 321 5 0 0 0 - - -, f 5;
-#X floatatom 310 321 5 0 0 0 - - -, f 5;
-#X floatatom 350 321 5 0 0 0 - - -, f 5;
-#X floatatom 390 321 5 0 0 0 - - -, f 5;
-#X symbolatom 430 321 5 0 0 0 - - -, f 5;
+#X restore 290 306 pd distri;
+#X floatatom 230 356 5 0 0 0 - - -, f 5;
+#X floatatom 270 356 5 0 0 0 - - -, f 5;
+#X floatatom 310 356 5 0 0 0 - - -, f 5;
+#X floatatom 350 356 5 0 0 0 - - -, f 5;
+#X floatatom 390 356 5 0 0 0 - - -, f 5;
+#X symbolatom 430 356 5 0 0 0 - - -, f 5;
 #N canvas 512 144 1276 350 distri 0;
 #X obj 160 0 inlet;
 #X obj 90 70 route wind_kph;
@@ -107,13 +107,13 @@
 #X connect 12 0 19 0;
 #X connect 13 0 20 0;
 #X connect 14 0 13 0;
-#X restore 540 271 pd distri;
-#X floatatom 480 321 5 0 0 0 - - -, f 5;
-#X floatatom 520 321 5 0 0 0 - - -, f 5;
-#X floatatom 560 321 5 0 0 0 - - -, f 5;
-#X floatatom 600 321 5 0 0 0 - - -, f 5;
-#X floatatom 640 321 5 0 0 0 - - -, f 5;
-#X symbolatom 680 321 5 0 0 0 - - -, f 5;
+#X restore 540 306 pd distri;
+#X floatatom 480 356 5 0 0 0 - - -, f 5;
+#X floatatom 520 356 5 0 0 0 - - -, f 5;
+#X floatatom 560 356 5 0 0 0 - - -, f 5;
+#X floatatom 600 356 5 0 0 0 - - -, f 5;
+#X floatatom 640 356 5 0 0 0 - - -, f 5;
+#X symbolatom 680 356 5 0 0 0 - - -, f 5;
 #N canvas 512 144 1276 350 distri 0;
 #X obj 160 0 inlet;
 #X obj 90 70 route wind_kph;
@@ -156,13 +156,13 @@
 #X connect 12 0 19 0;
 #X connect 13 0 20 0;
 #X connect 14 0 13 0;
-#X restore 790 271 pd distri;
-#X floatatom 730 321 5 0 0 0 - - -, f 5;
-#X floatatom 770 321 5 0 0 0 - - -, f 5;
-#X floatatom 810 321 5 0 0 0 - - -, f 5;
-#X floatatom 850 321 5 0 0 0 - - -, f 5;
-#X floatatom 890 321 5 0 0 0 - - -, f 5;
-#X symbolatom 930 321 5 0 0 0 - - -, f 5;
+#X restore 790 306 pd distri;
+#X floatatom 730 356 5 0 0 0 - - -, f 5;
+#X floatatom 770 356 5 0 0 0 - - -, f 5;
+#X floatatom 810 356 5 0 0 0 - - -, f 5;
+#X floatatom 850 356 5 0 0 0 - - -, f 5;
+#X floatatom 890 356 5 0 0 0 - - -, f 5;
+#X symbolatom 930 356 5 0 0 0 - - -, f 5;
 #N canvas 512 144 1276 350 distri 0;
 #X obj 160 0 inlet;
 #X obj 90 70 route wind_kph;
@@ -205,13 +205,13 @@
 #X connect 12 0 19 0;
 #X connect 13 0 20 0;
 #X connect 14 0 13 0;
-#X restore 1040 271 pd distri;
-#X floatatom 980 321 5 0 0 0 - - -, f 5;
-#X floatatom 1020 321 5 0 0 0 - - -, f 5;
-#X floatatom 1060 321 5 0 0 0 - - -, f 5;
-#X floatatom 1100 321 5 0 0 0 - - -, f 5;
-#X floatatom 1140 321 5 0 0 0 - - -, f 5;
-#X symbolatom 1180 321 4 0 0 0 - - -, f 4;
+#X restore 1040 306 pd distri;
+#X floatatom 980 356 5 0 0 0 - - -, f 5;
+#X floatatom 1020 356 5 0 0 0 - - -, f 5;
+#X floatatom 1060 356 5 0 0 0 - - -, f 5;
+#X floatatom 1100 356 5 0 0 0 - - -, f 5;
+#X floatatom 1140 356 5 0 0 0 - - -, f 5;
+#X symbolatom 1180 356 4 0 0 0 - - -, f 4;
 #N canvas 1920 64 1920 991 idees 0;
 #X obj 60 20 cnv 15 500 300 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
@@ -262,56 +262,54 @@
 #X msg 120 300 1 \, 0 100;
 #X obj 120 240 del 200;
 #X msg 40 330 440;
-#X obj 454 371 muzville;
-#X obj 454 351 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 454 406 muzville;
+#X obj 454 386 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
-#X obj 704 371 muzville;
-#X obj 704 351 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 704 406 muzville;
+#X obj 704 386 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
-#X obj 204 371 muzville;
-#X obj 204 351 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 204 406 muzville;
+#X obj 204 386 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
 #X obj 40 300 loadbang;
-#X obj 332 800 *~ 0.05;
+#X obj 622 770 *~ 0.05;
 #X obj 320 120 oscparse;
-#X obj 218 470 send~ vannes;
-#X obj 954 371 muzville;
-#X obj 954 351 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 218 505 send~ vannes;
+#X obj 954 406 muzville;
+#X obj 954 386 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
 #X obj 40 460 send~ receivedata;
-#X obj 272 720 +~;
-#X obj 412 720 +~;
-#X obj 332 750 +~;
-#X obj 790 240 route Lannion;
-#X obj 290 240 route Lorient;
-#X obj 390 240 print Lorient;
-#X obj 1040 240 route Quimper;
-#X obj 172 670 receive~ vannes;
-#X obj 290 670 receive~ rennes;
-#X obj 412 670 receive~ morlaix;
-#X obj 542 670 receive~ lorient;
-#X obj 392 750 receive~ receivedata;
+#X obj 562 690 +~;
+#X obj 702 690 +~;
+#X obj 622 720 +~;
+#X obj 790 275 route Lannion;
+#X obj 290 275 route Lorient;
+#X obj 390 275 print Lorient;
+#X obj 1040 275 route Quimper;
+#X obj 462 640 receive~ vannes;
+#X obj 580 640 receive~ rennes;
+#X obj 832 640 receive~ lorient;
+#X obj 682 720 receive~ receivedata;
 #X obj 320 30 loadbang;
-#X obj 218 410 r selectSynth;
+#X obj 218 445 r selectSynth;
 #X obj 1300 246 vradio 20 0 0 5 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 0;
+#000000 #000000 3;
 #X text 1325 266 synthStrings;
 #X text 1324 286 FMfull;
 #X text 1324 306 waveSynth;
 #X text 1325 246 off;
-#X obj 468 410 r selectSynth;
-#X obj 718 410 r selectSynth;
-#X obj 968 410 r selectSynth;
-#X obj 468 470 send~ rennes;
-#X obj 718 470 send~ Lannion;
-#X obj 968 470 send~ lorient;
-#X obj 218 440 synths;
-#X obj 468 440 synths;
+#X obj 468 445 r selectSynth;
+#X obj 718 445 r selectSynth;
+#X obj 968 445 r selectSynth;
+#X obj 468 505 send~ rennes;
+#X obj 968 505 send~ lorient;
+#X obj 218 475 synths;
+#X obj 468 475 synths;
 #X obj 1300 190 loadbang;
 #X text 1300 170 Sélection du synthé;
 #X text 1325 327 uglySynth;
-#X obj 718 440 synths;
-#X obj 968 440 synths;
+#X obj 718 475 synths;
+#X obj 968 475 synths;
 #X obj 1460 270 vradio 15 1 0 4 empty empty empty 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
 #X text 1480 266 sine;
@@ -323,9 +321,9 @@
 #X text 1460 240 options de waveSynth;
 #X text 1460 440 options de uglySynth;
 #X obj 1480 514 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 1513 514 hradio 15 1 0 2 empty empty empty 0 -8 0 10 #fcfcfc
-#000000 #000000 1;
+#000000 #000000 0;
 #X text 1511 486 mode;
 #X text 1461 489 harmo;
 #X text 1553 469 detune (mode 2), f 9;
@@ -334,21 +332,29 @@
 #X obj 1480 590 s uglySynthOptions;
 #X obj 1570 550 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
-#X floatatom 400 800 5 0 0.1 0 - - -, f 5;
+#X floatatom 690 770 5 0 0.1 0 - - -, f 5;
 #X obj 1300 520 vsl 15 128 0 0.1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 9650 1;
+#000000 #000000 6350 1;
 #X msg 1300 490 0.05;
 #X obj 1300 460 loadbang;
 #X obj 1300 670 s volume;
-#X obj 450 800 r volume;
+#X obj 740 770 r volume;
 #X text 1300 440 volume général;
 #X msg 1300 220 1;
-#X text 370 640 Mixage;
-#X text 0 130 signal de réception des données;
+#X text 660 610 Mixage;
 #X text 550 180 routing des données et génération des valeurs midi
 ;
-#X text 1440 120 paramètres;
+#X text 1300 120 paramètres;
 #X text 310 0 réception des données OSC;
+#X obj 1460 193 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 1460 214 s generateMidi;
+#X obj 704 210 r generateMidi;
+#X text 1460 170 Activer/désactiver la génération MIDI;
+#X text 30 510 réception des données;
+#X text 30 490 Envoie un signal à la;
+#X obj 702 640 receive~ lannion;
+#X obj 718 505 send~ lannion;
 #X connect 5 0 43 0;
 #X connect 5 0 45 0;
 #X connect 6 0 10 0;
@@ -398,17 +404,17 @@
 #X connect 44 0 41 0;
 #X connect 45 0 44 0;
 #X connect 46 0 40 0;
-#X connect 47 1 86 1;
+#X connect 47 1 84 1;
 #X connect 48 0 47 0;
-#X connect 49 1 90 1;
+#X connect 49 1 88 1;
 #X connect 50 0 49 0;
-#X connect 51 1 85 1;
+#X connect 51 1 83 1;
 #X connect 52 0 51 0;
 #X connect 53 0 46 0;
 #X connect 54 0 9 0;
 #X connect 54 0 9 1;
 #X connect 55 0 6 0;
-#X connect 57 1 91 1;
+#X connect 57 1 89 1;
 #X connect 58 0 57 0;
 #X connect 60 0 62 0;
 #X connect 61 0 62 1;
@@ -419,31 +425,36 @@
 #X connect 66 0 32 0;
 #X connect 67 0 60 0;
 #X connect 68 0 60 1;
-#X connect 69 0 61 0;
-#X connect 70 0 61 1;
-#X connect 71 0 54 0;
-#X connect 72 0 7 0;
-#X connect 73 0 85 0;
-#X connect 74 0 98 0;
-#X connect 79 0 86 0;
-#X connect 80 0 90 0;
-#X connect 81 0 91 0;
-#X connect 85 0 56 0;
-#X connect 86 0 82 0;
-#X connect 87 0 117 0;
-#X connect 90 0 83 0;
-#X connect 91 0 84 0;
-#X connect 92 0 97 0;
-#X connect 101 0 107 0;
-#X connect 102 0 107 1;
-#X connect 102 0 109 0;
-#X connect 106 0 107 2;
-#X connect 106 0 109 0;
-#X connect 107 0 108 0;
-#X connect 109 0 107 0;
-#X connect 110 0 54 1;
-#X connect 111 0 114 0;
-#X connect 112 0 111 0;
-#X connect 113 0 112 0;
-#X connect 115 0 110 0;
-#X connect 117 0 74 0;
+#X connect 69 0 61 1;
+#X connect 70 0 54 0;
+#X connect 71 0 7 0;
+#X connect 72 0 83 0;
+#X connect 73 0 96 0;
+#X connect 78 0 84 0;
+#X connect 79 0 88 0;
+#X connect 80 0 89 0;
+#X connect 83 0 56 0;
+#X connect 84 0 81 0;
+#X connect 85 0 115 0;
+#X connect 88 0 127 0;
+#X connect 89 0 82 0;
+#X connect 90 0 95 0;
+#X connect 99 0 105 0;
+#X connect 100 0 105 1;
+#X connect 100 0 107 0;
+#X connect 104 0 105 2;
+#X connect 104 0 107 0;
+#X connect 105 0 106 0;
+#X connect 107 0 105 0;
+#X connect 108 0 54 1;
+#X connect 109 0 112 0;
+#X connect 110 0 109 0;
+#X connect 111 0 110 0;
+#X connect 113 0 108 0;
+#X connect 115 0 73 0;
+#X connect 120 0 121 0;
+#X connect 122 0 50 0;
+#X connect 122 0 58 0;
+#X connect 122 0 48 0;
+#X connect 122 0 52 0;
+#X connect 126 0 61 0;

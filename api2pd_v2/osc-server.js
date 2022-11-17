@@ -1,4 +1,4 @@
-// example found on https://www.npmjs.com/package/osc-js
+// référence du package osc-js : https://www.npmjs.com/package/osc-js
 
 const dgram = require('dgram')
 const OSC = require('osc-js')
@@ -11,7 +11,11 @@ class OSCServer {
     this.address = address;
   }
 
-  // send a messsage via udp
+  /**
+   * Envoyer un messsage OSC via udp
+   * @param {String} msgStr nom du canal OSC sur lequel envoyer le message  
+   * @param {*} value message à envoyer
+   */
   sendMsg(msgStr, value) {
     const message = new OSC.Message('/' + msgStr, value);
     // console.log('message: ', message);
