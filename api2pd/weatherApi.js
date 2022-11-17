@@ -17,7 +17,7 @@ const options = {
 };
 
 axios.request(options).then(function (response) {
-	// console.log(response.data);
+	console.log(response.data);
     oscServer.sendMsg('wind', response.data.current.wind_kph);
 }).catch(function (error) {
 	console.error(error);
