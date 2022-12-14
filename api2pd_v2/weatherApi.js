@@ -15,7 +15,7 @@ class WeatherAPI {
             url: 'https://weatherapi-com.p.rapidapi.com/current.json',
             params: {q: this.city},
             headers: {
-              'X-RapidAPI-Key': 'b1ad918ba5msh3c0ab9e6425505fp173eb1jsn7ddc110d1e29',
+              'X-RapidAPI-Key': '', /* Mettez ici votre clé d'API */
               'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             }
         };
