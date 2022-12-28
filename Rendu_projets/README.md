@@ -17,5 +17,22 @@ L'évaluation portera sur deux points :
 
 La complexité du projet ou le propos artistique ne sont pas évalués.
 
+## Comment uploader son projet ?
+
+- Empaqueter son projet en un unique fichier compressé (.zip dans l'idéal)
+
+- Cliquer sur le drop-down menu [`Add file`](../assets/git_upload.png)
+
+- Choisir `Upload files`
+
+- Suivre les indications de [`l'interface`](../assets/git_upload_2.png) pour uploader vos fichiers
+
+- Compléter la section `Commit changes`. Merci de préciser vos noms dans le champ description.
+
+- Parmi les 2 options proposées en bas de la section `Commit changes`, sélectionner `Commit directly to the COURS branch.`
+
+- Valider en cliquant sur le bouton `Commit changes` 
+
+
 
 
